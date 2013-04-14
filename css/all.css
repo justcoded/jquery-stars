@@ -1,0 +1,66 @@
+html{
+	border:0;
+	padding:0;
+	margin:0;
+}
+body{
+	padding:0;
+	margin:0;
+	background:#fff;
+	font:13px/18px Arial, sans-serif;
+	color:#040404;
+}
+a{
+	color:#4ebdeb;
+}
+a:hover{
+	text-decoration:none;
+}
+img{
+	border:0;
+}
+form,fieldset{
+	border:0;
+	padding:0;
+	margin:0;
+}
+h1, h2, h3, h4, strong{
+	color:#fd4f00;
+}
+h2{
+	font-size:20px;
+	margin:20px 0 15px;
+}
+h3{
+	font-size:16px;
+	margin:20px 0 15px;
+}
+p{
+	margin:12px 0 0;
+}
+.skip-to-content{
+	display:none;
+}
+
+
+#page{
+	width:900px;
+	margin:0 auto;
+	padding:50px 0;
+}
+pre{
+	font:12px/14px "Courier New",monospace;
+	padding:15px;
+	background:#eee;
+}
+div.examples{
+	width:100%;
+	overflow:hidden;
+}
+div.examples div{
+	width:40%;
+	height:100px;
+	padding:10px;
+	margin:15px 15px 0 0;
+	float:left;
+}

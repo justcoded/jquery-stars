@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"> 
+<head profile="http://gmpg.org/xfn/11"> 
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<title>Stars effect</title> 
+	
+	<link rel="stylesheet" href="css/all.css" type="text/css" media="screen" /> 
+	
+	<!-- <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script> -->
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-stars.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#stars1').jstars({
+				image_path: 'images'
+			});
+
+			$('#stars2').jstars({
+				image_path: 'images',
+				style: 'blue'
+			});
+
+			$('#stars3').jstars({
+				image_path: 'images',
+				style: 'yellow',
+				frequency: 19
+			});
+
+			$('#stars4').jstars({
+				image_path: 'images',
+				style: 'green'
+			});
+
+			$('#stars5').jstars({
+				image_path: 'images',
+				style: 'red',
+				frequency: 1
+			});
+
+			$('#stars6').jstars({
+				image_path: 'images',
+				style: 'rand'
+			});
+			
+		})
+	</script>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+<body id="top">
+<div id="page">
+	<h1>jQuery Stars cursor animation</h1>
+	<p>This is magic jquery plugin that add "magic" to any element on your site. Very easy to use</p>
+<div><pre>
+$('#stars1').jstars({
+	image_path: 'images', // folder with magic image
+	style: 'white',       // optional, magic style, default = white
+	frequency: 5          // optional, from 1 to 19
+});
+</pre></div>
+	<p>Plugin support such styles: white, red, blue, green, yellow, rand</p>
+	<h2>Examples</h2>
+	<div class="examples">
+		<div id="stars1" style="background:#000;color:yellow;">
+			<p>container with white stars</p>
+		</div>
+		<div id="stars2" style="background:#fff; border:1px solid #000;">
+			<p>container with blue stars</p>
+		</div>
+		<div id="stars3" style="background:#55f;color:yellow;">
+			<p>container with yellow stars<br/>frequency = 19</p>
+		</div>
+		<div id="stars4" style="background:#999;">
+			<p>container with green stars</p>
+		</div>
+		<div id="stars5" style="background:#999;">
+			<p>container with red stars<br/>frequency = 1</p>
+		</div>
+		<div id="stars6" style="background:#999;">
+			<p>container with random stars</p>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>
