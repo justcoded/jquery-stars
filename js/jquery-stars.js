@@ -40,7 +40,11 @@ $.jstars = {};
 $.fn.jstars = function(settings)
 {
 	// check IE. only IE9+ support
-	if( $.browser.msie && $.browser.version < 9 ) return;
+	var ua = window.navigator.userAgent,
+		msie = ua.indexOf("MSIE ");
+	if (msie > 0) {
+		if (parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))) < 9) return;
+	}
 	// apply default params
 	settings = $.extend({}, $.fn.jstars.defaults, settings);
 	// define frequency
