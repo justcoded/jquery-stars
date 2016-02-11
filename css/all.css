@@ -1,66 +1,44 @@
-html{
-	border:0;
-	padding:0;
-	margin:0;
+.entry-box {
+	text-align: center;
+	padding: 50px 0;
+	background: #18bc9c;
+	color: #fff;
+	margin: 120px 0 20px;
 }
-body{
-	padding:0;
-	margin:0;
-	background:#fff;
-	font:13px/18px Arial, sans-serif;
-	color:#040404;
+.entry-box h1 {
+	font-size: 40px;
+	line-height: 44px;
+	margin: 0 0 20px;
 }
-a{
-	color:#4ebdeb;
+.box {
+	height: 200px;
+	background: #000;
+	margin-bottom: 30px;
+	text-align: center;
+	position: relative;
 }
-a:hover{
-	text-decoration:none;
+.box p {
+	margin: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 25px;
+	margin: auto;
 }
-img{
-	border:0;
+.box.white {
+	background: #fff;
+	border: 1px solid #000;
 }
-form,fieldset{
-	border:0;
-	padding:0;
-	margin:0;
+.box.yellow {
+	background:#55f;
+	color:yellow;
 }
-h1, h2, h3, h4, strong{
-	color:#fd4f00;
+.box.gray {
+	background:#999;
 }
-h2{
-	font-size:20px;
-	margin:20px 0 15px;
-}
-h3{
-	font-size:16px;
-	margin:20px 0 15px;
-}
-p{
-	margin:12px 0 0;
-}
-.skip-to-content{
-	display:none;
-}
-
-
-#page{
-	width:900px;
-	margin:0 auto;
-	padding:50px 0;
-}
-pre{
-	font:12px/14px "Courier New",monospace;
-	padding:15px;
-	background:#eee;
-}
-div.examples{
-	width:100%;
-	overflow:hidden;
-}
-div.examples div{
-	width:40%;
-	height:100px;
-	padding:10px;
-	margin:15px 15px 0 0;
-	float:left;
+.examples h2 {
+	text-align: center;
+	margin: 0 0 30px;
 }
