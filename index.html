@@ -6,6 +6,7 @@
 	<title>jQuery Stars</title>
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link media="all" rel="stylesheet" href="css/all.css">
 </head>
 <body id="page-top">
@@ -27,29 +28,23 @@
 	            <li class="hidden active">
 	                <a href="#page-top"></a>
 	            </li>
-	            <li class="page-scroll">
-	                <a href="#examples">Examples</a>
+	            <li>
+	                <a href="#example-1">Example 1</a>
 	            </li>
-	            <li class="page-scroll">
-	                <a href="#types">Types</a>
+	            <li>
+	                <a href="#example-2">Example 2</a>
 	            </li>
-	            <li class="page-scroll">
-	                <a href="#overlay">Overlay</a>
+	            <li>
+	                <a href="#example-3">Example-3</a>
 	            </li>
-	            <li class="page-scroll">
-	                <a href="#animation">Animation</a>
+	            <li>
+	                <a href="#example-4">Example-4</a>
 	            </li>
-	            <li class="page-scroll">
-	                <a href="#position">Position</a>
+	            <li>
+	                <a href="#example-5">Example-5</a>
 	            </li>
-	            <li class="page-scroll">
-	                <a href="#candies">Candies</a>
-	            </li>
-	            <li class="page-scroll">
-	                <a href="#svg">SVG</a>
-	            </li>
-	            <li class="page-scroll">
-	                <a href="#features">Featurs</a>
+	            <li>
+	                <a href="#example-6">Example-6</a>
 	            </li>
 	        </ul>
 	    </div>
@@ -60,62 +55,138 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<h1>jQuery Stars cursor animation</h1>
+				<hr class="star-light">
 				<p>This is magic jquery plugin that add "magic" to any element on your site. Very easy to use</p>
 			</div>
 		</div>
 	</div>
 </header>
-<div class="container">
-<pre>
-<code>
-$('#stars1').jstars({
-	image_path: 'images', // folder with magic image
-	style: 'white',       // optional, magic style, default = white
-	frequency: 5          // optional, from 1 to 19
+<section id="example-1" class="example-box blue">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<pre>
+					<code>
+$('#example-1').jstars({
+image_path: 'images', // folder with magic image
+style: 'white',       // optional, magic style, default = white
+frequency: 5          // optional, from 1 to 19
 });
-</code>
-</pre>
-<div class="examples">
-	<p>Plugin support such styles: white, red, blue, green, yellow, rand</p>
-	<h2>Examples</h2>
-	<div class="row">
-		<div class="col-sm-4">
-			<div id="stars1" class="box yellow">
+					</code>
+				</pre>
+			</div>
+			<div class="col-sm-6">
 				<p>container with white stars</p>
 			</div>
 		</div>
-		<div class="col-sm-4">
-			<div id="stars2" class="box white">
+	</div>
+</section>
+<section id="example-2" class="example-box white">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<pre>
+					<code>
+$('#example-2').jstars({
+image_path: 'images', // folder with magic image
+style: 'blue' // optional, magic style, default = white
+});
+					</code>
+				</pre>
+			</div>
+			<div class="col-sm-6">
 				<p>container with blue stars</p>
 			</div>
 		</div>
-		<div class="col-sm-4">
-			<div id="stars3" class="box yellow">
+	</div>
+</section>
+<section id="example-3" class="example-box yellow">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<pre>
+					<code>
+$('#example-3').jstars({
+image_path: 'images', // folder with magic image
+style: 'yellow', // optional, magic style, default = white
+frequency: 19 // optional, from 1 to 19
+});
+
+					</code>
+				</pre>
+			</div>
+			<div class="col-sm-6">
 				<p>container with yellow stars<br/>frequency = 19</p>
 			</div>
 		</div>
-		<div class="col-sm-4">
-			<div id="stars4" class="box gray">
+	</div>
+</section>
+<section id="example-4" class="example-box white">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<pre>
+					<code>
+$('#example-4').jstars({
+image_path: 'images', // folder with magic image
+style: 'green' // optional, magic style, default = white
+});
+
+					</code>
+				</pre>
+			</div>
+			<div class="col-sm-6">
 				<p>container with green stars</p>
 			</div>
 		</div>
-		<div class="col-sm-4">
-			<div id="stars5" class="box gray">
-				<p>container with red stars<br/>frequency = 1</p>
+	</div>
+</section>
+<section id="example-5" class="example-box black">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<pre>
+					<code>
+$('#example-5').jstars({
+image_path: 'images', // folder with magic image
+style: 'green' // optional, magic style, default = white
+});
+
+					</code>
+				</pre>
+			</div>
+			<div class="col-sm-6">
+				<p>container with green stars</p>
 			</div>
 		</div>
-		<div class="col-sm-4">
-			<div id="stars6" class="box gray">
+	</div>
+</section>
+<section id="example-6" class="example-box green">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<pre>
+					<code>
+$('#example-6').jstars({
+image_path: 'images', // folder with magic image
+style: 'rand' // optional, magic style, default = white
+});
+
+					</code>
+				</pre>
+			</div>
+			<div class="col-sm-6">
 				<p>container with random stars</p>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
 	<script type="text/javascript" src="js/jquery-stars.js"></script>
+	<script type="text/javascript" src="js/smothscrool.js"></script>
 	<script type="text/javascript" src="js/jquery.main.js"></script>
 </body>
 </html>

@@ -1,14 +1,14 @@
 .entry-box {
 	text-align: center;
-	padding: 50px 0;
+	padding: 70px 0;
 	background: #18bc9c;
 	color: #fff;
-	margin: 120px 0 20px;
+	margin: 51px 0 0;
 }
 .entry-box h1 {
 	font-size: 40px;
 	line-height: 44px;
-	margin: 0 0 20px;
+	margin: 0 0 40px;
 }
 .box {
 	height: 200px;
@@ -38,7 +38,61 @@
 .box.gray {
 	background:#999;
 }
+.example-box {
+	padding: 80px 0;
+}
+.example-box.blue {
+	background: #55f;
+}
+.example-box.yellow {
+	background: yellow;
+}
+.example-box.green {
+	background: green;
+}
+.example-box.black {
+	background: black;
+	color: #fff;
+}
 .examples h2 {
 	text-align: center;
 	margin: 0 0 30px;
+}
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    color: #fff;
+    text-align: center
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+hr.star-light {
+    border-color: #fff
+}
+
+hr.star-light:after {
+    color: #fff;
+    background-color: #18bc9c
+}
+
+hr.star-primary {
+    border-color: #2c3e50
+}
+
+hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff
 }
