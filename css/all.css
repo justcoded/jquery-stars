@@ -1,62 +1,83 @@
-.entry-box {
+body {
+	font-family: Verdana,sans-serif;
+	color:#2c3e50;
+}
+.navbar{
+	background: #2c3e50;
+	color:#fff;
+	text-transform: uppercase;
+	border:none;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:visited,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:visited{
+	color:#fff;
+}
+.navbar-default .navbar-brand{
+	font-size:22px;
+	font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-brand:hover{
+	color:#18bc9c;
+}
+.info-box {
 	text-align: center;
 	padding: 70px 0;
 	background: #18bc9c;
 	color: #fff;
-	margin: 51px 0 0;
+	margin: 50px 0 0;
+	font-size: 24px;
 }
-.entry-box h1 {
-	font-size: 40px;
+.info-box h1 {
+	font-size: 50px;
 	line-height: 44px;
 	margin: 0 0 40px;
 }
-.box {
-	height: 200px;
-	background: #000;
-	margin-bottom: 30px;
-	text-align: center;
-	position: relative;
-}
-.box p {
-	margin: 0;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	height: 25px;
-	margin: auto;
-}
-.box.white {
-	background: #fff;
-	border: 1px solid #000;
-}
-.box.yellow {
-	background:#55f;
-	color:yellow;
-}
-.box.gray {
-	background:#999;
-}
+
 .example-box {
 	padding: 80px 0;
+	font-size:18px
 }
-.example-box.blue {
-	background: #55f;
+pre {
+	border:none;
+	padding: 0;
+	margin: 50px 0 0;
+	background: none;
 }
-.example-box.yellow {
-	background: yellow;
-}
+
 .example-box.green {
-	background: green;
-}
-.example-box.black {
-	background: black;
+	background: #18bc9c;
 	color: #fff;
 }
+.example-box.blue {
+	background: #2c3e50;
+	color:#fff;
+}
+.example-box.dark {
+	background: #233140;
+	color:#fff;
+}
+.example-box.gray {
+	background: #18bc9c;
+	color: #fff;
+}
+
+#usage pre,
+.example-single pre{
+	margin-top:20px;
+}
+.examples h1,
 .examples h2 {
 	text-align: center;
 	margin: 0 0 30px;
+}
+.example-box h2 {
+	margin: 0 0 10px;
 }
 hr.star-light,
 hr.star-primary {
@@ -95,4 +116,11 @@ hr.star-primary {
 hr.star-primary:after {
     color: #2c3e50;
     background-color: #fff
+}
+
+#footer {
+	background: #233140;
+	color:#fff;
+	padding: 20px 0 10px;
+	font-size: 12px;
 }

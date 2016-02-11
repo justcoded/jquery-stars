@@ -20,34 +20,47 @@ function initAnchors() {
 
 // initialize stars
 function initStars() {
-	$('#example-1').jstars({
+
+	$('#examples').jstars({
 		image_path: 'images'
 	});
 
-	$('#example-2').jstars({
+	$('#example-blue').jstars({
 		image_path: 'images',
-		style: 'blue'
+		style: 'blue',
+    frequency: 15
 	});
 
-	$('#example-3').jstars({
+	$('#example-yellow').jstars({
 		image_path: 'images',
 		style: 'yellow',
 		frequency: 19
 	});
 
-	$('#example-4').jstars({
+	$('#example-green').jstars({
 		image_path: 'images',
 		style: 'green'
 	});
 
-	$('#example-5').jstars({
+	$('#example-red').jstars({
 		image_path: 'images',
 		style: 'red',
-		frequency: 1
+		frequency: 5
 	});
 
-	$('#example-6').jstars({
+	$('#example-rand').jstars({
 		image_path: 'images',
 		style: 'rand'
 	});
+
+	$('#custom').jstars({
+		image_path: 'images',
+    image: 'candy-cane-stars.png',
+		style: 'white',
+    width: 34,
+    height: 34,
+    delay: 700,
+    frequency: 5
+	});  
+  
 }
