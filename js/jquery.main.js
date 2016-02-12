@@ -6,10 +6,10 @@ $(document).ready(function(){
 // initialize smooth anchor links
 function initAnchors() {
 	new SmoothScroll({
-		anchorLinks: '.navbar a[href^="#"]:not([href="#"])',
+		anchorLinks: '.nav > li > a',
 		extraOffset: function() {
 			var totalHeight = 0;
-			jQuery('.navbar').each(function(){
+			jQuery('.navbar-fixed-top').each(function(){
 				totalHeight += jQuery(this).outerHeight();
 			});
 			return totalHeight;
