@@ -31,10 +31,7 @@
 
 (function($) {
 
-var jstar_timer = null;
-var jstar_index = 0;
-var jstar_dindex = 0;
-var jstar_image = null;
+var jstar_call_id = 0;
 
 $.jstars = {};
 $.fn.jstars = function(settings)
@@ -49,14 +46,31 @@ $.fn.jstars = function(settings)
 	settings = $.extend({}, $.fn.jstars.defaults, settings);
 	// define frequency
 	settings.frequency = 20 - Math.max(1, Math.min(settings.frequency, 19));
+  
 	// save in global
-	$.jstars.settings = settings;
+  var jstar_timer = null;
+  var jstar_index = 0;
+  var jstar_dindex = 0;
+  var jstar_image = null;
+  var jstar_id = 'jstar_span_' + jstar_call_id++;
 	
 	return this.each(
 		function()
 		{
 			// preprocess
 			if( !jstar_timer ){
+        // timer function
+        var jstar_uptade_star_bg = function(){
+          if( ! $('span.jstar_span').size ) return;
+
+          $('span.jstar_span.'+jstar_id).each(function(){
+            var bg_pos = $(this).css('background-position').split(' ');
+            var bg_pos_x = parseInt(bg_pos[0]);
+            var bg_pos_y = parseInt(bg_pos[1]);
+            $(this).css('background-position', (bg_pos_x - settings.width) + 'px ' + bg_pos_y + 'px');
+          })
+        }        
+        
 				// init timer
 				jstar_timer = setInterval(jstar_uptade_star_bg, settings.delay / 9);
 				// init image
@@ -99,7 +113,7 @@ $.fn.jstars = function(settings)
 					}
 				}
 				
-				var span = '<span id="' + id + '" class="jstar_span" style="display:block; width:27px; height:27px; background:url('+jstar_image.src+') no-repeat '+bg_pos+'; margin:0; padding:0; position:absolute; top:-50px; left:0;">&nbsp;</span>';
+				var span = '<span id="' + id + '" class="jstar_span '+jstar_id+'" style="display:block; width:27px; height:27px; background:url('+jstar_image.src+') no-repeat '+bg_pos+'; margin:0; padding:0; position:absolute; top:-50px; left:0;">&nbsp;</span>';
 				$(document.body).append(span);
 				
 				var star = $('#' + id);
@@ -109,7 +123,7 @@ $.fn.jstars = function(settings)
 						left: x,
 						'opacity': opacity
 					})
-					.animate({ opacity: 0 }, 300, function(){ star.remove(); }); // remove span on finish animate*/
+					.animate({ opacity: 0 }, settings.delay, function(){ star.remove(); }); // remove span on finish animate*/
 			})
 		}
 	)
@@ -118,18 +132,6 @@ $.fn.jstars = function(settings)
 /**
  * helper functions
  */
-
-// timer function
-function jstar_uptade_star_bg(){
-	if( ! $('span.jstar_span').size ) return;
-	
-	$('span.jstar_span').each(function(){
-		var bg_pos = $(this).css('background-position').split(' ');
-		var bg_pos_x = parseInt(bg_pos[0]);
-		var bg_pos_y = parseInt(bg_pos[1]);
-		$(this).css('background-position', (bg_pos_x - $.jstars.settings.width) + 'px ' + bg_pos_y + 'px');
-	})
-}
 
 // math rand in interval
 function jstar_rand(from, to){
