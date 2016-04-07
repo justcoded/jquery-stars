@@ -25,7 +25,6 @@
 	    </div>
 	    <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
 	        <ul class="nav navbar-nav navbar-right">
-	            <li class="hidden active"><a href="#page-top"></a></li>
 	            <li><a href="#page-top">About</a></li>
 	            <li><a href="#usage">Usage</a></li>
 	            <li><a href="#examples">Examples</a></li>
@@ -54,17 +53,16 @@
 	<div class="container">
 		<h1>Usage</h1>
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<p>1. Include jQuery and our script at the bottom of your page:</p>
 				<pre><code class="html">
-	...
-	&lt;script src="//code.jquery.com/jquery-1.12.0.min.js"&gt;&lt;/script&gt;
-	&lt;script src="path/to/scripts/jquery-stars.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+...
+
+&lt;script src="//code.jquery.com/jquery-1.12.0.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/scripts/jquery-stars.js"&gt;&lt;/script&gt;<br>
 				</code></pre>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<p>2. Add javascript code to your page or script file:</p>
 				<pre><code class="javascript">
 jQuery('#selector').jstars({
@@ -72,7 +70,8 @@ jQuery('#selector').jstars({
 	style: 'white',       // optional, color, default: white
 	frequency: 12         // optional, from 1 to 19
 });
-				</pre></code>
+				</code>
+				</pre>
 			</div>
 		</div>
 	</div>
@@ -81,16 +80,23 @@ jQuery('#selector').jstars({
 <section id="examples" class="example-box blue">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12 visible-md-block visible-lg-block">
 				<pre><code class="javascript">
 jQuery('#example-1').jstars({
 	image_path: 'images'  
 });
 				</code></pre>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<h2>Example 1: White</h2>
 				<p>This example illustrates "white" style. As you can see we do not specify any parameters, so style and frequency are set to "white" and "12" automatically.</p>
+			</div>
+			<div class="col-md-6 col-sm-12 visible-xs-block visible-sm-block">
+				<pre><code class="javascript">
+jQuery('#example-1').jstars({
+	image_path: 'images'  
+});
+				</code></pre>
 			</div>
 		</div>
 	</div>
@@ -99,12 +105,12 @@ jQuery('#example-1').jstars({
 <section id="example-blue" class="example-box white">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<h2>Example 2: Blue</h2>
 				<p>This one illustrates "blue" style.</p>
 				<p>Also we increased frequency a bit.</p>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<pre><code class="javascript">
 jQuery('#example-blue').jstars({
 	image_path: 'images',
@@ -120,7 +126,7 @@ jQuery('#example-blue').jstars({
 <section id="example-yellow" class="example-box green">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12 visible-md-block visible-lg-block">
 				<pre><code>
 jQuery('#example-yellow').jstars({
 	image_path: 'images',
@@ -129,10 +135,19 @@ jQuery('#example-yellow').jstars({
 });
 				</code></pre>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<h2>Example 3: Yellow</h2>
 				<p>This example illustrates "yellow" style.</p>
 				<p>And the frequency is set to max value.</p>
+			</div>
+			<div class="col-md-6 col-sm-12 visible-xs-block visible-sm-block">
+<pre><code>
+jQuery('#example-yellow').jstars({
+	image_path: 'images',
+	style: 'yellow',
+	frequency: 20
+});
+				</code></pre>
 			</div>
 		</div>
 	</div>
@@ -141,12 +156,12 @@ jQuery('#example-yellow').jstars({
 <section id="example-red" class="example-box white">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<h2>Example 4: Red</h2>
 				<p>This example illustrates "red" style.</p>
 				<p>The frequency is low here, so the stars shine rarely.</p>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<pre><code class="javascript">
 jQuery('#example-red').jstars({
 	image_path: 'images',
@@ -162,7 +177,7 @@ jQuery('#example-red').jstars({
 <section id="example-green" class="example-box blue">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12 visible-md-block visible-lg-block">
 				<pre><code class="javascript">
 jQuery('#example-green').jstars({
 	image_path: 'images',
@@ -170,9 +185,17 @@ jQuery('#example-green').jstars({
 });
 				</code></pre>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<h2>Example 5: Green</h2>
 				<p>This example illustrates "green" style.</p>
+			</div>
+			<div class="col-md-6 col-sm-12 visible-xs-block visible-sm-block">
+				<pre><code class="javascript">
+jQuery('#example-green').jstars({
+	image_path: 'images',
+	style: 'green'
+});
+				</code></pre>
 			</div>
 		</div>
 	</div>
@@ -181,12 +204,12 @@ jQuery('#example-green').jstars({
 <section id="example-rand" class="example-box green">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<h2>Example 6: Red</h2>
 				<p>Our plugin has tricky mode - to show all stars colors randomly.</p>
 				<p>You should use style "rand" for this feature.</p>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<pre><code class="javascript">
 jQuery('#example-rand').jstars({
 	image_path: 'images',
@@ -234,13 +257,13 @@ jQuery('#example-rand').jstars({
 <section id="custom" class="example-box blue">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<h2>Customize the image</h2>
 				<p>You can try to prepare your own asset to display different image instead of stars.</p>
 				<p>To do that you should make a sprite of 9 images, each next part is differ from previous with 40 degrees angle.</p>
 				<p>Let's try how candy cane looks... It will be good for Xmas eve :)</p>
 			</div>
-			<div class="col-sm-6">
+			<div class="col-md-6 col-sm-12">
 				<pre><code class="javascript">
 jQuery('#example-rand').jstars({
 	image_path: 'images',

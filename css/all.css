@@ -36,7 +36,7 @@ body {
 .info-box h1 {
 	font-size: 50px;
 	line-height: 44px;
-	margin: 0 0 40px;
+	margin: 0 0 60px;
 }
 
 .example-box {
@@ -48,8 +48,8 @@ pre {
 	padding: 0;
 	margin: 50px 0 0;
 	background: none;
+	overflow: auto;
 }
-
 .example-box.green {
 	background: #18bc9c;
 	color: #fff;
@@ -81,7 +81,7 @@ pre {
 }
 hr.star-light,
 hr.star-primary {
-    margin: 25px auto 30px;
+    margin: 25px auto 50px;
     padding: 0;
     max-width: 250px;
     border: 0;
@@ -117,10 +117,62 @@ hr.star-primary:after {
     color: #2c3e50;
     background-color: #fff
 }
-
+.navbar-nav a {
+	outline: none;
+}
+.navbar-nav .anchor-active {
+	color: #20ba95 !important;
+}
 #footer {
 	background: #233140;
 	color:#fff;
 	padding: 20px 0 10px;
 	font-size: 12px;
+}
+.navbar-default .navbar-toggle .icon-bar {background-color: #fff;}
+@media only screen and (max-width:980px){
+	.info-box {
+		font-size: 16px;
+		line-height: 18px;
+		padding: 45px 0;
+	}
+	.info-box h1 {
+		font-size: 34px;
+		line-height: 38px;
+		margin: 0 0 27px;
+	}
+	hr.star-light:after,
+	hr.star-primary:after {
+		font-size: 1em;
+	}
+	hr.star-light,
+	hr.star-primary {
+		margin: 20px auto;
+		border-width: 3px 0 0;
+	}
+	.example-box {
+		padding: 40px 0;
+		font-size: 16px;
+		text-align: center;
+	}
+	pre {
+		margin: 20px 0;
+		text-align: left;
+	}
+}
+@media only screen and (max-width:767px){
+	.info-box h1 {
+		font-size: 30px;
+		line-height: 34px;
+	}
+	.info-box p {margin: 0 0 20px;}
+	#footer {
+		padding: 10px 0;
+		text-align: center;
+	}
+	.examples h1, .examples h2 {
+		font-size: 30px;
+	}
+	.example-box {padding-bottom: 20px;}
+	#footer p {margin: 0;}
 }
