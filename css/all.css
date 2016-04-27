@@ -38,6 +38,9 @@ body {
 	line-height: 44px;
 	margin: 0 0 60px;
 }
+.info-box a.btn-primary{
+	background: #2c3e50;
+}
 
 .example-box {
 	padding: 80px 0;
