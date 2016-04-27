@@ -205,7 +205,7 @@ jQuery('#example-green').jstars({
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-12">
-				<h2>Example 6: Red</h2>
+				<h2>Example 6: Random</h2>
 				<p>Our plugin has tricky mode - to show all stars colors randomly.</p>
 				<p>You should use style "rand" for this feature.</p>
 			</div>
@@ -254,7 +254,7 @@ jQuery('#example-rand').jstars({
 	</div>
 </section>
 	
-<section id="custom" class="example-box blue">
+<section id="custom" class="example-box dark">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-sm-12">
@@ -279,6 +279,36 @@ jQuery('#example-rand').jstars({
 		</div>
 	</div>
 </section>
+	
+<section id="custom2" class="example-box blue">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<h2>Old-school stars</h2>
+				<p>For old-school designs we have first version of stars which were released in v1.</p>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<pre><code class="javascript">
+jQuery('#custom2').jstars({
+	image_path: 'images',
+	image: 'jstar-map.png',
+	style: 'rand',
+	width: 27,
+	height: 27,
+	style_map: {
+		white: 0,
+		blue: -27,
+		green: -54,
+		red: -81,
+		yellow: -108
+	},
+	delay: 300
+});
+				</code></pre>
+			</div>
+		</div>
+	</div>
+</section>	
 	
 <section id="footer">
 	<div class="container">

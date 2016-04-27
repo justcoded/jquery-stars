@@ -63,4 +63,19 @@ function initStars() {
     frequency: 5
 	});  
   
+  $('#custom2').jstars({
+		image_path: 'images',
+    image: 'jstar-map.png',
+    style: 'rand',
+    width: 27,
+    height: 27,
+    style_map: {
+      white: 0,
+      blue: -27,
+      green: -54,
+      red: -81,
+      yellow: -108
+    },
+    delay: 300
+	});  
 }

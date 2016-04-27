@@ -144,19 +144,19 @@ function jstar_rand(from, to){
 
 $.fn.jstars.defaults = {
 	image_path: '', // this is requried param
-	image: 'jstar-map.png', // this is requried param
+	image: 'jstar-modern.png', // this is requried param
 	style: 'white',
 	frequency: 12,
 	style_map: {
 		white: 0,
-		blue: -27,
-		green: -54,
-		red: -81,
-		yellow: -108
+		blue: -25,
+		green: -50,
+		red: -75,
+		yellow: -100
 	},
-	width: 27,
-	height: 27,
-	delay: 300
+	width: 25,
+	height: 25,
+	delay: 500
 };
 
 
