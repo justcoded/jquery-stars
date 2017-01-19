@@ -113,7 +113,7 @@ $.fn.jstars = function(settings)
 					}
 				}
 				
-				var span = '<span id="' + id + '" class="jstar_span '+jstar_id+'" style="display:block; width:27px; height:27px; background:url('+jstar_image.src+') no-repeat '+bg_pos+'; margin:0; padding:0; position:absolute; top:-50px; left:0;">&nbsp;</span>';
+				var span = '<span id="' + id + '" class="jstar_span '+jstar_id+'" style="display:block; width:27px; height:27px; background:url('+jstar_image.src+') no-repeat '+bg_pos+'; margin:0; padding:0; position:absolute; top:-50px; left:0; pointer-events: none;">&nbsp;</span>';
 				$(document.body).append(span);
 				
 				var star = $('#' + id);
