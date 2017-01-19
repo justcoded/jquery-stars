@@ -5,6 +5,7 @@ init_wp
 /nbproject/private/
 /nbproject/
 .project
+.idea
 
 # composer
 composer.lock
