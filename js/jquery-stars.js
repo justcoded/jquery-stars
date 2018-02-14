@@ -79,7 +79,7 @@ $.fn.jstars = function(settings)
 			}
 			
 			// hover event
-			$(this).mousemove(function(e){
+			function hoverEvent(e) {
 				if( (jstar_dindex++ % settings.frequency) != 0) return;
 				
 				// define what side we need to show stars:
@@ -113,7 +113,7 @@ $.fn.jstars = function(settings)
 					}
 				}
 				
-				var span = '<span id="' + id + '" class="jstar_span '+jstar_id+'" style="display:block; width:27px; height:27px; background:url('+jstar_image.src+') no-repeat '+bg_pos+'; margin:0; padding:0; position:absolute; top:-50px; left:0; pointer-events: none;">&nbsp;</span>';
+				var span = '<span id="' + id + '" class="jstar_span '+jstar_id+'" style="display:block; width:27px; height:27px; background:url('+jstar_image.src+') no-repeat '+bg_pos+'; margin:0; padding:0; position:absolute; top:-50px; left:0; pointer-events: none; touch-action: auto;">&nbsp;</span>';
 				$(document.body).append(span);
 				
 				var star = $('#' + id);
@@ -124,7 +124,27 @@ $.fn.jstars = function(settings)
 						'opacity': opacity
 					})
 					.animate({ opacity: 0 }, settings.delay, function(){ star.remove(); }); // remove span on finish animate*/
-			})
+			}
+			
+			$(this).on('mousemove', function(e){
+				hoverEvent(e);
+			});
+			
+			var touchTarget;
+			
+			this.addEventListener('touchstart', function (e) {
+				touchTarget = e.target;
+			});
+
+			this.addEventListener('touchmove', function (e) {
+				touchTarget = '';
+
+				hoverEvent(e);
+			});
+			
+			this.addEventListener('touchend', function () {
+				$(touchTarget).trigger('click');
+			});
 		}
 	)
 };
