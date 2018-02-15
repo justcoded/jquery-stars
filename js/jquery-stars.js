@@ -92,8 +92,17 @@ $.fn.jstars = function(settings)
 				var opacity = Math.min(Math.random() + 0.4, 1);
 				
 				// calculate coordinate
-				var x = e.pageX + (sideX * randX);
-				var y = e.pageY + (sideY * randY);
+				var touch;
+
+				if (e.touches) {
+					touch = e.touches[0];
+				}
+
+				var pageX = e.pageX || touch.pageX;
+				var pageY = e.pageY || touch.pageY;
+
+				var x = pageX + (sideX * randX);
+				var y = pageY + (sideY * randY);
 				
 				// show span and launch animate
 				var id = 'jstar_' + jstar_index++;
