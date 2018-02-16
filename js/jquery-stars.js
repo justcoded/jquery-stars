@@ -139,6 +139,12 @@ $.fn.jstars = function(settings)
 				this.addEventListener('touchmove', function (e) {
 					hoverEvent(e);
 				});
+
+				if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					this.addEventListener('mousemove', function (e) {
+						hoverEvent(e);
+					});
+				}
 			} else {
 				this.addEventListener('mousemove', function (e) {
 					hoverEvent(e);
